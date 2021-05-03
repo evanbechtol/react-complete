@@ -6,8 +6,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>Hi, I'm a React App</h1>
-                <ExpenseItem/>
+                <ExpenseItem amount="$294.97" expense="Car Insurance" date="May 3, 2021"/>
             </div>
         );
     }

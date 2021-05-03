@@ -1,10 +1,14 @@
-function ExpenseItem() {
+import "./ExpenseItem.css";
+
+function ExpenseItem(props) {
+    const {date, expense, amount} = props;
+
     return (
-        <div>
-            <div>Date</div>
-            <div>
-                <h2>Title</h2>
-                <div>Amount</div>
+        <div className="expense-item">
+            <div>{date}</div>
+            <div className="expense-item__description">
+                <h2>{expense}</h2>
+                <div className="expense-item__price">{amount}</div>
             </div>
         </div>
     );
