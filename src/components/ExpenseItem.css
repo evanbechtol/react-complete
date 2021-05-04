@@ -31,9 +31,7 @@
     font-weight: bold;
     color: white;
     background-color: #40005d;
-    border: 1px solid #877c92;
     padding: 0.5rem;
-    border-radius: 2px;
 }
 
 @media (min-width: 580px) {
