@@ -2,11 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     padding: 0.5rem;
     margin: 1rem;
-    border-radius: 3em;
-    background-color: rgba(75, 75, 75, 0.85);
+    border-radius: 3em !important;
+    background: rgb(0,48,82);
+    background: linear-gradient(0deg, rgba(0,48,82,1) 0%, rgba(0,138,255,1) 100%);
 }
 
 .expense-item__description {
@@ -21,13 +21,13 @@
 
 .expense-item h2 {
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
     flex: 1;
     margin: 0 1rem;
 }
 
 .expense-item__price {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
     padding: 0.5rem;
@@ -42,11 +42,11 @@
     }
 
     .expense-item__description h2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .expense-item__price {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         padding: 0.5rem 1.5rem;
     }
 }
