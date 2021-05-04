@@ -3,10 +3,11 @@
     flex-direction: column;
     width: 5.5rem;
     height: 5.5rem;
-    background-color: #2a2a2a;
-    color: white;
+    background-color: #eee;
+    color: #4e4e4e;
     align-items: center;
     justify-content: center;
+    border-radius: 3em;
 }
 
 .expense-date__month {
