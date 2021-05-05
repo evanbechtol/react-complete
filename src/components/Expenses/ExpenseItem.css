@@ -4,9 +4,8 @@
     align-items: center;
     padding: 0.5rem;
     margin: 1rem;
-    border-radius: 3em !important;
-    background: rgb(0,48,82);
-    background: linear-gradient(0deg, rgba(0,48,82,1) 0%, rgba(0,138,255,1) 100%);
+    border-radius: 0 3em 3em 3em !important;
+    background: rgb(0, 99, 165);
 }
 
 .expense-item__description {
