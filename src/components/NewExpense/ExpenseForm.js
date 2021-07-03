@@ -6,15 +6,8 @@ const ExpenseForm = (props) => {
   const [ enteredAmount, setEnteredAmount ] = useState( "" );
   const [ enteredDate, setEnteredDate ] = useState( "" );
 
-  /*const [userInput, setUserInput] = useState( {
-    enteredTitle: '',
-    enteredAmount: '',
-    enteredDate: ''
-  } );*/
-
   const titleChangeHandler = ( e ) => {
     setEnteredTitle( e.target.value );
-    //setUserInput((currentValues) => ({ ...currentValues, z: e.target.value }));
   };
 
   const amountChangeHandler = ( e ) => {
@@ -32,7 +25,7 @@ const ExpenseForm = (props) => {
       amount: enteredAmount,
       date: new Date(enteredDate)
     };
-    //console.log(expenseData);
+
     // This passes the data back up to the parent component "NewExpense.js"
     props.onSaveExpenseData(expenseData);
     resetForm();
@@ -80,6 +73,7 @@ const ExpenseForm = (props) => {
         </div>
 
         <div className="new-expense__actions">
+          <button className="cancel" aria-label="cancel adding expense">Cancel</button>
           <button aria-label="add expense" type="submit">Add Expense</button>
         </div>
       </form>
