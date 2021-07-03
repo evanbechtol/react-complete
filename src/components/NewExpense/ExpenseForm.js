@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = (props) => {
+const ExpenseForm = ( props ) => {
   const [ enteredTitle, setEnteredTitle ] = useState( "" );
   const [ enteredAmount, setEnteredAmount ] = useState( "" );
   const [ enteredDate, setEnteredDate ] = useState( "" );
@@ -18,23 +18,28 @@ const ExpenseForm = (props) => {
     setEnteredDate( e.target.value );
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = ( e ) => {
     e.preventDefault();
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: new Date(enteredDate)
+      date: new Date( enteredDate )
     };
 
     // This passes the data back up to the parent component "NewExpense.js"
-    props.onSaveExpenseData(expenseData);
+    props.onSaveExpenseData( expenseData );
+    cancelAddingExpense();
     resetForm();
   };
 
+  const cancelAddingExpense = () => {
+    props.onCancelAddingExpense();
+  };
+
   const resetForm = () => {
-    setEnteredAmount('');
-    setEnteredDate('');
-    setEnteredTitle('');
+    setEnteredAmount( "" );
+    setEnteredDate( "" );
+    setEnteredTitle( "" );
   };
 
   return (
@@ -73,7 +78,12 @@ const ExpenseForm = (props) => {
         </div>
 
         <div className="new-expense__actions">
-          <button className="cancel" aria-label="cancel adding expense">Cancel</button>
+          <button className="cancel"
+                  aria-label="cancel adding expense"
+                  onClick={cancelAddingExpense}
+          >
+            Cancel
+          </button>
           <button aria-label="add expense" type="submit">Add Expense</button>
         </div>
       </form>
