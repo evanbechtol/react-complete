@@ -21,14 +21,27 @@
     padding: 1rem 2rem;
     background-color: #0063A5;
     color: white;
-    border-radius: 2em;
+    border-radius: .25em;
+    border: 1px solid #0063A5;
+    margin: 0 4px;
     transition: 0.2s all;
+}
+
+.new-expense .cancel {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    color: black;
+    transition: 0.2s all;
+}
+
+.new-expense .cancel:hover {
+    background-color: #bbb;
+    border: 1px solid #bbb;
 }
 
 .new-expense button:hover,
 .new-expense button:active {
     background-color: #004b7e;
-    border-radius: 2em;
     border-color: #0063A5;
 }
 
